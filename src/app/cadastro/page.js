@@ -5,11 +5,11 @@ import { useRouter } from 'next/navigation'
 
 export default function Cadastro() {
     const route = useRouter();
-    const [titulo, setTitulo] = useState();
-    const [data_cadastro, setData_cadastro] = useState();
-    const [preco, setPreco] = useState();
-    const [descricao, setDescricao] = useState();
-    const [imagem, setImagem] = useState();
+    const [titulo, setTitulo] = useState('');
+    const [data_cadastro, setData_cadastro] = useState('');
+    const [preco, setPreco] = useState('');
+    const [descricao, setDescricao] = useState('');
+    const [imagem, setImagem] = useState('');
 
     const cadastrar = (e) => {
         e.preventDefault()

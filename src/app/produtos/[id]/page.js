@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 
-export default async function Produto({ params }) {
+export default async function produtos({ params }) {
     const router = useRouter();
     const id = { id: parseInt(params.id) }
 
