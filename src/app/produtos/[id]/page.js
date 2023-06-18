@@ -1,8 +1,9 @@
 'use client'
 
+
 import { useRouter } from "next/navigation";
 
-export default async function produtos({ params }) {
+export default async function Produto({ params }) {
     const router = useRouter();
     const id = { id: parseInt(params.id) }
 
@@ -31,12 +32,13 @@ export default async function produtos({ params }) {
         }
     }
     return (
-        <div>
-            <p>{produto.titulo}</p>
+        <div >
+         <p>{produto.titulo}</p>
             <p>{produto.data_cadastro}</p>
             <p>{produto.preco}</p>
             <p>{produto.descricao}</p>
-            <img src={produto.imagem}/>
+          <img src={produto.imagem} width='15%'/><br/>
+          <br/>
             <button onClick={e => e.preventDefault(remover())}>REMOVER</button>
 
         </div>

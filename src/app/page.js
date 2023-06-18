@@ -14,7 +14,7 @@ export default async function Home() {
 
       {produto.map(produto => (
         <div key={produto.id}>
-         <p>{produto.titulo}</p>
+           <p>{produto.titulo}</p>
             <p>{produto.data_cadastro}</p>
             <p>{produto.preco}</p>
             <p>{produto.descricao}</p>

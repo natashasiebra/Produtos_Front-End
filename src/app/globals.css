@@ -15,3 +15,6 @@
     color: white;
     border-radius: 18px;
   }
+  .remover{
+    border: 2px solid black;
+  }
