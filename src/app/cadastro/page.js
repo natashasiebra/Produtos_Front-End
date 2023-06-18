@@ -3,6 +3,7 @@ import { useState } from 'react'
 import styles from '../page.module.css'
 import { useRouter } from 'next/navigation'
 
+
 export default function Cadastro() {
     const route = useRouter();
     const [titulo, setTitulo] = useState('');
@@ -31,40 +32,41 @@ export default function Cadastro() {
 
     return (
         <div className={styles.main}>
-            <form  onSubmit={cadastrar}>
-                <input
+            <form  onSubmit={cadastrar} className={styles.imagem}>
+               
+                <input className={styles.sla}
                     type="text"
                     placeholder='Titulo:'
                     
                     onChange={e => setTitulo(e.target.value)}
                 /><br/><br/>
-                <input
+                <input className={styles.sla}
                     type="text"
                     placeholder='Data de cadastro:'
                     nome="data_cadastro"
                     onChange={e => setData_cadastro(e.target.value)}
                 /><br/><br/>
-                <input
+                <input className={styles.sla}
                     type="text"
                     placeholder='Preço:'
                     nome="preco"
                     onChange={e => setPreco(e.target.value)}
                 /><br/><br/>
-                <input
+                <input className={styles.sla}
                     type="text"
                     placeholder='Descrição:'
                     nome="descricao"
                     onChange={e => setDescricao(e.target.value)}
                 /><br/><br/>
-                <input
+                <input className={styles.sla}
                     type="text"
                     placeholder='Imagem:'
                     nome="imagem"
                     onChange={e => setImagem(e.target.value)}
                 /><br/><br/>
-                <button type='submit'>Cadastrar</button>
+                <button type='submit'>Adicionar</button><br/><br/>
                 <div>
-                    <a href='/'>Voltar</a>
+                    <a className={styles.a} href='/'>Voltar</a>
                 </div>
             </form>
         </div>

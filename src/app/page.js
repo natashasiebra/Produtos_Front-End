@@ -11,6 +11,12 @@ export default async function Home() {
 
   return (
     <main> <Link href="/cadastro" className='voltar'> Adicionar Jogos + </Link>
+    <ul>
+  <li><a className="active" href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
 
       {produto.map(produto => (
         <div key={produto.id} className='container'>

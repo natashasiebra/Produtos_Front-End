@@ -1,7 +1,33 @@
 
 .main {
-  padding: 10px 20px;
-  border-radius: 20px;
+  margin: 0px;
   text-align: center;
+  height: 100%;
  }
- 
+ .sla{
+  padding: 20px 50px;
+  font-size: 15px;
+  border-radius: 18px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ }
+ .a:link, .a:visited {
+  border-radius: 18px;
+  background-color: white;
+  color: black;
+  border: 2px solid #1a0785;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.a:hover, .a:active {
+  background-color: rgb(26, 7, 133);
+  color: white;
+}
+
+.img{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
