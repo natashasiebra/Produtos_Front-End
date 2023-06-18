@@ -5,21 +5,21 @@ import { useRouter } from "next/navigation";
 
 export default async function Produto({ params }) {
     const router = useRouter();
-    const id = { id: parseInt(params.id) }
+    
 
-    const idJson = JSON.stringify(id);
-
-    const req = await fetch("http://localhost:3000/produtos", {
+    const req = await fetch("http://localhost:3000/produtos/" + params.codigo, {
         method: "POST",
         cache: "no-cache",
         headers: { 'content-type': 'application/json' },
         body: idJson
     })
-    const produto = await req.json();
+    const res = await req.json();
+    const produto = res[0]
 
 
     const remover = () => {
-        console.log(idJson)
+        const codigoJson = JSON.stringify({codigo: produto.codigo})
+        
         try {
             fetch("http://localhost:3000/produtos", {
                 method: "DELETE",
