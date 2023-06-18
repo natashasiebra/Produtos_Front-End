@@ -1,0 +1,17 @@
+.imagem:link, .imagem:visited {
+    background-color: white;
+    color: black;
+    border: 2px solid rgb(37, 2, 161);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 18px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+  .imagem:hover, .imagem:active {
+    background-color: rgb(37, 2, 161);
+    color: white;
+    border-radius: 18px;
+  }
