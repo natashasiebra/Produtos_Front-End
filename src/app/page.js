@@ -14,8 +14,10 @@ export default async function Home() {
 
       {produtos.map(produtos => (
         <div key={produtos.id}>
-          <p>{produtos.nome}</p>
-          <p>{produtos.idade}</p>
+         <p>{produtos.titulo}</p>
+            <p>{produtos.data_cadastro}</p>
+            <p>{produtos.preco}</p>
+            <p>{produtos.descricao}</p>
           <img src={produtos.imagem} width='15%'/><br/>
           <Link className='imagem' href={`/produtos/${produtos.id}`}>ver mais</Link>
         </div>

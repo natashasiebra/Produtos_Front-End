@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 
-export default async function Pessoa({ params }) {
+export default async function Produto({ params }) {
     const router = useRouter();
     const id = { id: parseInt(params.id) }
 
@@ -32,9 +32,10 @@ export default async function Pessoa({ params }) {
     }
     return (
         <div>
-            <p>{produtos.nome}</p>
-            <p>{produtos.idade}</p>
-            <p>{produtos.uf}</p>
+            <p>{produtos.titulo}</p>
+            <p>{produtos.data_cadastro}</p>
+            <p>{produtos.preco}</p>
+            <p>{produtos.descricao}</p>
             <button onClick={e => e.preventDefault(remover())}>REMOVER</button>
 
         </div>
