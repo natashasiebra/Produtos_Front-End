@@ -10,7 +10,7 @@ export default function Cadastro() {
     const [preco, setPreco] = useState();
     const [descricao, setDescricao] = useState();
     const [imagem, setImagem] = useState();
-    
+
     const cadastrar = (e) => {
         e.preventDefault()
         
@@ -35,7 +35,7 @@ export default function Cadastro() {
                 <input
                     type="text"
                     placeholder='Titulo:'
-                    nome="titulo"
+                    
                     onChange={e => setTitulo(e.target.value)}
                 /><br/>
                 <input
