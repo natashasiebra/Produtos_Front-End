@@ -11,8 +11,9 @@ export default async function Home() {
 
   return (
     <main> 
-      <img className='topo' src='https://cdn-icons-png.flaticon.com/512/5087/5087408.png' width='7%'/>
+      
     <ul>
+    <img className='topo' src='https://cdn-icons-png.flaticon.com/512/5087/5087408.png' width='5.5%'/>
   <li><a href="/cadastro">Adicionar jogos +</a></li>
   <li><a href="#news">Sobre o site</a></li>
   <li class="dropdown">
@@ -29,16 +30,13 @@ export default async function Home() {
     </div>
   </li>
 </ul><br/><br/>
-
-
       {produto.map(produto => (
         <div key={produto.id} className='container'>
-          <img src={produto.imagem} width='60%'/><br/>
-          <p>{produto.titulo} </p>
+          <img className='image' src={produto.imagem} width='70%'/>
+          <p>{produto.titulo}  </p>
           <p>{produto.descricao}</p>
           <Link className='imagem' href={`/produtos/${produto.id}`}>ver mais</Link><br/>
         </div>
-        
       ) )
       }
       
