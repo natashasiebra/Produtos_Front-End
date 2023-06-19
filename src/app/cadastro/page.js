@@ -40,7 +40,7 @@ export default function Cadastro() {
                     
                     onChange={e => setTitulo(e.target.value)}
                 /><br/><br/>
-                <input className={styles.sla}
+                <input className={styles.date}
                     type="date"
                     placeholder='Data de cadastro:'
                     nome="data_cadastro"
