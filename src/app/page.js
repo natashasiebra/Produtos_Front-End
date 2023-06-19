@@ -10,13 +10,26 @@ export default async function Home() {
   const produto = await req.json();
 
   return (
-    <main> <Link href="/cadastro" className='voltar'> Adicionar Jogos + </Link>
+    <main> 
+      <img className='topo' src='https://cdn-icons-png.flaticon.com/512/5087/5087408.png' width='7%'/>
     <ul>
-  <li><a className="active" href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
-</ul>
+  <li><a href="/cadastro">Adicionar jogos +</a></li>
+  <li><a href="#news">Sobre o site</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Jogos</a>
+    <div class="dropdown-content">
+      <a href="#">Aventura</a>
+      <a href="#">Corrida</a>
+      <a href="#">Terror</a>
+      <a>Exploração</a>
+      <a>Exploração Online</a>
+      <a>Guerra</a>
+      <a>Simulação</a>
+      <a>Sobrevivencia</a>
+    </div>
+  </li>
+</ul><br/><br/>
+
 
       {produto.map(produto => (
         <div key={produto.id} className='container'>
