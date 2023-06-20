@@ -14,8 +14,10 @@ export default async function Produto({ params }) {
         headers: { 'content-type': 'application/json' },
         body: idJson
     })
-    const produto = await req.json();
 
+    const produto = await req.json();
+    console.log(idJson)
+    
 
     const remover = () => {
         console.log(idJson)
@@ -32,13 +34,16 @@ export default async function Produto({ params }) {
     }
 
 
+
     return (
         <div>
-            <p>{produto.titulo}</p>
-            <p>{produto.data_cadastro}</p>
-            <p>{produto.preco}</p>
-            <p>{produto.descricao}</p>
-            <p>{produto.imagem}</p>
+
+        
+            <h1 className="product-title">{produto.titulo}tesye</h1>
+            <p>{produto.data_cadastro}gvgv</p>
+            <p>{produto.preco}kbbhjb</p>
+            <p>{produto.descricao}vvgv</p>
+            <p>{produto.imagem}hjb</p>
             <button onClick={e => e.preventDefault(remover())}>REMOVER</button><br/>
             <a href='/'>Voltar</a>
 
