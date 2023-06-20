@@ -64,7 +64,7 @@ export default function Cadastro() {
                     nome="imagem"
                     onChange={e => setImagem(e.target.value)}
                 /><br/><br/>
-                <button type='submit'>Adicionar</button><br/><br/>
+                <button className={styles.btn} type='submit'>Adicionar</button><br/><br/>
                 <div>
                     <a className={styles.a} href='/'>Voltar</a>
                 </div>

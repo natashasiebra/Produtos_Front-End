@@ -30,6 +30,8 @@ export default async function Produto({ params }) {
             alert("Ocorreu um erro" + error)
         }
     }
+
+
     return (
         <div>
             <p>{produto.titulo}</p>

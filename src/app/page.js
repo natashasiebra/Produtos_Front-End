@@ -30,13 +30,21 @@ export default async function Home() {
     </div>
   </li>
 </ul><br/><br/>
+
       {produto.map(produto => (
-        <div key={produto.id} className='container'>
-          <img className='image' src={produto.imagem} width='70%'/>
-          <p>{produto.titulo}  </p>
-          <p>{produto.descricao}</p>
-          <Link className='imagem' href={`/produtos/${produto.id}`}>ver mais</Link><br/>
+        <div className='container'>
+
+
+          <div key={produto.id} className='container-main' >
+            <img className='image' src={produto.imagem} width='300px' height='300px'/><br/><br/>
+            <label id='title'>{produto.titulo}  </label><br/><br/>
+            <label id='title-2'>{produto.descricao}</label><br/><br/>
+            <Link className='imagem' href={`/produtos/${produto.id}`}>ver mais</Link><br/>
+            </div>
+
+
         </div>
+        
       ) )
       }
       
