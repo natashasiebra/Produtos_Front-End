@@ -7,7 +7,7 @@ export default async function Home() {
   const req = await fetch("http://localhost:3005/produtos", {
     cache: "no-cache"
   });
-  const produtos = await req.json();
+  const produto = await req.json();
 
   return (
     <main> 
@@ -31,15 +31,16 @@ export default async function Home() {
   </li>
 </ul><br/><br/>
 
-      {produtos.map(produtos => (
+      {produto.map(produto => (
         <div className='container'>
 
 
-          <div key={produtos.id} className='container-main' >
-            <img className='image-banner' src={produtos.imagem} width='300px' height='300px'/><br/><br/>
-            <label id='title'>{produtos.titulo}  </label><br/><br/>
-            <label id='title-2'>{produtos.descricao}</label><br/><br/>
-            <Link className='imagem' href={`/produtos/${produtos.id}`}>ver mais</Link><br/>
+          <div key={produto.id} className='container-main' >
+            <img className='image-banner' src={produto.imagem} width='300px' height='200px'/><br/><br/>
+            <label id='title'>{produto.titulo}  </label><br/><br/>
+            <label id='title-2'>{produto.descricao}</label><br/><br/>
+            <label className="produto-price">{produto.preco}</label><br/><br/>
+            <Link className='imagem' href={`/produtos/${produto.id}`}>ver mais</Link><br/>
             </div>
 
 

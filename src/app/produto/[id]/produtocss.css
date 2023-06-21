@@ -4,8 +4,8 @@
 }
 
 .produto-imagem{
-    width: 950px;
-    height: 600px;
+    width: 650px;
+    height: 350px;
     border-radius: 12px;
 }
 
@@ -24,7 +24,8 @@
 }
 
 .produto-date{
-
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 15px;
 }
 
 .produto-description{
@@ -49,7 +50,7 @@
 
 .produto-btn-red{
     width: 120px;
-    border: 2px solid #2502a1;
+    border: 2px solid #bd0a0a;
     cursor: pointer;
     border-radius: 18px;
     padding: 7px;
@@ -58,8 +59,9 @@
 }
 
 .produto-btn-red:hover{
-    background-color: #ff0000;
+    background-color: #bd0a0a;
     color: white;
+    border: 2px solid #bd0a0a;
 }
 
 .produto-btn-container{

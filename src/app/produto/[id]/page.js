@@ -43,9 +43,9 @@ export default async function Produto({ params }) {
         
             <h1 className="produto-title">{produto.titulo}</h1>
             <p className="produto-date">{produto.data_cadastro}</p>
-            <p className="produto-price">{produto.preco}</p>
+            
             <p className="produto-description">{produto.descricao}</p>
-        
+            <p className="produto-price">{produto.preco}</p>
             <div className="produto-btn-container">
             <button className="produto-btn-red" onClick={e => e.preventDefault(remover())}>REMOVER</button>
             <a href='/'><button className="produto-btn">Voltar</button></a>

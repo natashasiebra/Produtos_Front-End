@@ -22,6 +22,7 @@ export default function Cadastro() {
             descricao: descricao,
             imagem: imagem
         }
+        
         const produtoJson = JSON.stringify(produto);
         fetch("http://localhost:3005/produtos", {
             method: "POST",
@@ -29,7 +30,7 @@ export default function Cadastro() {
             body: produtoJson
         }).then(function(){ route.push("/")}).catch(()=> console.log("Não foi possível cadastrar!"))
     }
-
+    
     return (
         <div className={styles.main}>
             <form  onSubmit={cadastrar} className={styles.imagem}>
@@ -37,31 +38,30 @@ export default function Cadastro() {
                 <input className={styles.sla}
                     type="text"
                     placeholder='Titulo:'
-                    nome='titulo'
                     onChange={e => setTitulo(e.target.value)}
                 /><br/><br/>
                 <input className={styles.sla}
                     type="date"
                     placeholder='Data de cadastro:'
-                    nome="data_cadastro"
+
                     onChange={e => setData_cadastro(e.target.value)}
                 /><br/><br/>
                 <input className={styles.sla}
-                    type="text"
+                    type="number"
                     placeholder='Preço:'
-                    nome="preco"
+                   
                     onChange={e => setPreco(e.target.value)}
                 /><br/><br/>
                 <input className={styles.sla}
                     type="text"
                     placeholder='Descrição:'
-                    nome="descricao"
+                 
                     onChange={e => setDescricao(e.target.value)}
                 /><br/><br/>
                 <input className={styles.sla}
                     type="text"
                     placeholder='Imagem:'
-                    nome="imagem"
+                   
                     onChange={e => setImagem(e.target.value)}
                 /><br/><br/>
                 <button className={styles.btn} type='submit'>Adicionar</button><br/><br/>
