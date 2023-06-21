@@ -1,0 +1,67 @@
+.produto{
+    display: grid;
+    justify-content: center;
+}
+
+.produto-imagem{
+    width: 950px;
+    height: 600px;
+    border-radius: 12px;
+}
+
+.produto-title{
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+.produto-price{
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: rgb(38, 177, 38);
+    font-family: well 'Courier New', Courier, monospace ;
+}
+
+.produto-date{
+
+}
+
+.produto-description{
+    text-transform: capitalize;
+    font-size: 1.3rem;
+}
+
+.produto-btn{
+    width: 120px;
+    border: 2px solid #2502a1;
+    cursor: pointer;
+    border-radius: 18px;
+    padding: 7px;
+    margin-right: 10px;
+    text-transform: uppercase;
+}
+
+.produto-btn:hover{
+    background-color: #2502a1;
+    color: white;
+}
+
+.produto-btn-red{
+    width: 120px;
+    border: 2px solid #2502a1;
+    cursor: pointer;
+    border-radius: 18px;
+    padding: 7px;
+    margin-right: 10px;
+    text-transform: uppercase;
+}
+
+.produto-btn-red:hover{
+    background-color: #ff0000;
+    color: white;
+}
+
+.produto-btn-container{
+    display: flex;
+}

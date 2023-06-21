@@ -1,6 +1,7 @@
 'use client'
 
 import { useRouter } from "next/navigation";
+import './produtocss.css'
 
 export default async function Produto({ params }) {
     const router = useRouter();
@@ -8,7 +9,7 @@ export default async function Produto({ params }) {
 
     const idJson = JSON.stringify(id);
 
-    const req = await fetch("http://localhost:3000/produtos", {
+    const req = await fetch("http://localhost:3005/produtos", {
         method: "POST",
         cache: "no-cache",
         headers: { 'content-type': 'application/json' },
@@ -22,7 +23,8 @@ export default async function Produto({ params }) {
     const remover = () => {
         console.log(idJson)
         try {
-            fetch("http://localhost:3000/produtos", {
+            alert('Tem certeza que deseja realmente remover ?')
+            fetch("http://localhost:3005/produtos", {
                 method: "DELETE",
                 headers: { 'content-type': 'application/json' },
                 body: idJson
@@ -36,16 +38,18 @@ export default async function Produto({ params }) {
 
 
     return (
-        <div>
-
+        <div className="produto">
+            <img className="produto-imagem" src={produto.imagem} />
         
-            <h1 className="product-title">{produto.titulo}tesye</h1>
-            <p>{produto.data_cadastro}gvgv</p>
-            <p>{produto.preco}kbbhjb</p>
-            <p>{produto.descricao}vvgv</p>
-            <p>{produto.imagem}hjb</p>
-            <button onClick={e => e.preventDefault(remover())}>REMOVER</button><br/>
-            <a href='/'>Voltar</a>
+            <h1 className="produto-title">{produto.titulo}</h1>
+            <p className="produto-date">{produto.data_cadastro}</p>
+            <p className="produto-price">{produto.preco}</p>
+            <p className="produto-description">{produto.descricao}</p>
+        
+            <div className="produto-btn-container">
+            <button className="produto-btn-red" onClick={e => e.preventDefault(remover())}>REMOVER</button>
+            <a href='/'><button className="produto-btn">Voltar</button></a>
+            </div>
 
         </div>
 

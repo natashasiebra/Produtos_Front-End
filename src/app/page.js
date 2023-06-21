@@ -4,7 +4,7 @@ import './globals.css'
 
 export default async function Home() {
 
-  const req = await fetch("http://localhost:3000/produtos", {
+  const req = await fetch("http://localhost:3005/produtos", {
     cache: "no-cache"
   });
   const produtos = await req.json();
@@ -36,7 +36,7 @@ export default async function Home() {
 
 
           <div key={produtos.id} className='container-main' >
-            <img className='image' src={produtos.imagem} width='300px' height='300px'/><br/><br/>
+            <img className='image-banner' src={produtos.imagem} width='300px' height='300px'/><br/><br/>
             <label id='title'>{produtos.titulo}  </label><br/><br/>
             <label id='title-2'>{produtos.descricao}</label><br/><br/>
             <Link className='imagem' href={`/produtos/${produtos.id}`}>ver mais</Link><br/>
