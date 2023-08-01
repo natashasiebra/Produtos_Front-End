@@ -1,5 +1,4 @@
 "use client"
-import Link from 'next/link';
 import './globals.css'
 import Image from 'next/image';
 
@@ -8,13 +7,13 @@ export default async function Home() {
   const req = await fetch("http://localhost:3005/produtos", {
     cache: "no-cache"
   });
-  const produto = await req.json();
+ 
 
   return (
     <main> 
       
     <ul>
-    <img className='topo' src='https://cdn-icons-png.flaticon.com/512/5087/5087408.png' width='5.5%'/>
+    <Image className='topo' src='https://cdn-icons-png.flaticon.com/512/5087/5087408.png' width='5.5%'/>
   <li><a href="/cadastro">Adicionar jogos +</a></li>
   <li><a href="#news">Sobre o site</a></li>
   <li class="dropdown">
@@ -32,21 +31,6 @@ export default async function Home() {
   </li>
 </ul><br/><br/>
 
-      {produto.map(produto => (
-        <div className='container' key={produto.id}>
-          <div  className='container-main' >
-            <Image className='image-banner' src={produto.imagem} width='300px' height='200px'/><br/><br/>
-            <label id='title'>{produto.titulo}  </label><br/><br/>
-            <label id='title-2'>{produto.descricao}</label><br/><br/>
-            <label className="produto-price">{produto.preco}</label><br/><br/>
-            <Link className='imagem' href={`/produtos/${produto.id}`}>ver mais</Link><br/>
-            </div>
-
-
-        </div>
-        
-      ) )
-      }
       
     </main>
   )
