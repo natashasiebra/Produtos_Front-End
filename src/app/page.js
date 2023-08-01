@@ -13,7 +13,7 @@ export default async function Home() {
     <main> 
       
     <ul>
-    <Image className='topo' src='https://cdn-icons-png.flaticon.com/512/5087/5087408.png' width='5.5%'/>
+   
   <li><a href="/cadastro">Adicionar jogos +</a></li>
   <li><a href="#news">Sobre o site</a></li>
   <li class="dropdown">

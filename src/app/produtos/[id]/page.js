@@ -40,7 +40,7 @@ export default async function Produto({ params }) {
 
     return (
         <div className="produto">
-            <Image className="produto-imagem" src={produto.imagem} />
+           
         
             <h1 className="produto-title">{produto.titulo}</h1>
             <p className="produto-date">{produto.data_cadastro}</p>
