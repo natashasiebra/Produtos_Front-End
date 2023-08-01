@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import './produtocss.css'
-import Image from 'next/image';
+
 
 export default async function Produto({ params }) {
     const router = useRouter();
