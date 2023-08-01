@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import './produtocss.css'
+import Image from 'next/image';
 
 export default async function Produto({ params }) {
     const router = useRouter();
@@ -9,7 +10,7 @@ export default async function Produto({ params }) {
 
     const idJson = JSON.stringify(id);
 
-    const req = await fetch("http://localhost:3005/produtos", {
+    const req = await fetch("http://localhost:3005/produtos/", {
         method: "POST",
         cache: "no-cache",
         headers: { 'content-type': 'application/json' },
@@ -39,7 +40,7 @@ export default async function Produto({ params }) {
 
     return (
         <div className="produto">
-            <img className="produto-imagem" src={produto.imagem} />
+            <Image className="produto-imagem" src={produto.imagem} />
         
             <h1 className="produto-title">{produto.titulo}</h1>
             <p className="produto-date">{produto.data_cadastro}</p>
